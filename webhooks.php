@@ -7,11 +7,13 @@ $access_token = 'Ehx/Hu1wH3uEtKDQyaDH5QAFN33t4H2M7kFfxAP7+2H5yytGbjv44Jn08ZWkNAQ
  
 // Get POST body content
 $content = file_get_contents('php://input');
-echo '<PRE>';
-print_r($content);
+
 
 // Parse JSON
 $events = json_decode($content, true);
+
+echo '<PRE>';
+print_r($events);
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
