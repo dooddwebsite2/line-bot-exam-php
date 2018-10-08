@@ -11,9 +11,7 @@ $content = file_get_contents('php://input',FILE_USE_INCLUDE_PATH);
 
 // Parse JSON
 $events = json_decode($content, true);
-echo 'events';
-echo '<PRE>';
-print_r($events);
+
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	echo '1';
