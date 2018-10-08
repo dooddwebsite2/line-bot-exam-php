@@ -11,11 +11,12 @@ $content = file_get_contents('php://input');
 
 // Parse JSON
 $events = json_decode($content, true);
-
+echo 'events';
 echo '<PRE>';
 print_r($events);
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
+	echo '1';
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
